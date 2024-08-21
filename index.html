@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Kasi</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color:#010038;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Stack the image and text vertically */
+        }
+
+        .kasicard{
+            background: white;
+            padding: 2rem; /* Default padding */
+        }
+
+        .center-image {
+            max-width: 50%; /* Adjust as needed */
+            height: auto;
+            margin-bottom: 20px; /* Space between the image and the text */
+        }
+
+        .card {
+            border-radius: 15px;
+        }
+
+        h1, h2, h3 {
+            color: #ff6f61;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+     
+
+        .offcanvas-header {
+            background-color: #ff6f61;
+            color: white;
+        }
+
+        .offcanvas-body {
+            background-color: #ffe0e0;
+            color: #ff6f61;
+            font-size: 1.2em;
+        }
+
+
+        
+a {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: #e01300;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.10s;
+  letter-spacing: 4px;
+  overflow: hidden;
+}
+a:hover {
+  background: #e01300;
+  color: #ffffff;
+  box-shadow: 0 0 5px #e01300, 0 0 25px #e01300, 0 0 50px #e01300,
+    0 0 200px #e01300;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+a:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+a:nth-child(2) {
+  filter: hue-rotate(110deg);
+}
+a span {
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e01300);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #e01300);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #e01300);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #e01300);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+
+.kasi-text{
+  font-size:3rem;
+  color:#d10000;
+  font-weight: 700;
+  font-family: 'Merienda', cursive;
+  animation-name:glow;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0px 0px 5px #fff,0px 0px 5px #690000;}
+  to{text-shadow:0px 0px 20px #fff,0px 0px 20px #690000;}
+}
+
+    </style>
+</head>
+<body>
+
+   <div class="container">
+        <div class="row">
+            <div class="col-12">
+                
+                <div class="card shadow kasicard p-4 p-md-5 p-lg-6 text-center">
+                    <img src="img/kasi.jpg" alt="Happy Birthday Kasi" style="border-radius: 100px; width: 100px;" class="center-image mb-4">
+
+                    <h1 class="mb-4 kasi-text" >Happy Birthday Baby</h1>
+                    <p class="lead" style="font-weight: 600;">It’s been a year since we became a couple and
+                         to me, it feels like I have been dating you since 2022.
+                         <br>
+                         You have been my stubborn friend, best friend, my joy giver, and my source of happiness.
+                    </p>
+                    
+                    <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" style="font-weight: 700;">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Make a wish
+                      </a>
+                    <p class="">Hey Baby click on the button</p>
+                    
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <div class="offcanvas offcanvas-bottom" tabindex="-1" style="height: 80vh;" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Birthday Wish</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeVxj7w4ZDNtTf0xa_zP41MGurdffXFHi7yfI1N5cxfQbu0LQ/viewform?embedded=true" width="370" height="630" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
+
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
